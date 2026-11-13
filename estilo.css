@@ -221,7 +221,7 @@ a { color: var(--rojo); }
 /* ---- Página de Opsi (/opsi/) ---- */
 .migas { margin: 0 0 12px; font-size: .9rem; }
 .migas a { color: var(--blanco); }
-.portada.opsi .figura img { width: min(60vw, 300px); }
+.boton.corto { justify-self: start; padding: 0 28px; }
 .significados-grid { display: grid; gap: 12px; }
 .poses, .descargas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 0; padding: 0; list-style: none; }
 .poses li, .descarga { background: var(--blanco); border: 1px solid var(--linea); padding: 12px 8px 10px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
