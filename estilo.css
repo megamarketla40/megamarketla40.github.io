@@ -240,3 +240,33 @@ a { color: var(--rojo); }
 @media (min-width: 860px) {
   .poses, .descargas { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ---- Poses por categoría (/opsi/poses/) ---- */
+.cats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 0 0 22px; padding: 0; list-style: none; }
+.cat { display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; padding: 14px 10px 16px; background: var(--blanco); border: 1px solid var(--linea); color: var(--texto); text-decoration: none; text-align: center; }
+.cat:hover, .cat:focus-visible { border-color: var(--rojo); outline: none; }
+.cat img { height: 120px; width: auto; max-width: 100%; object-fit: contain; }
+.cat b { font-size: 1rem; }
+.cat span { color: var(--rojo); font-weight: 700; font-size: .9rem; }
+.cat small { color: var(--texto-2); font-size: .82rem; line-height: 1.35; }
+.cats.compacto .cat.chico { min-height: 64px; justify-content: center; padding: 10px; }
+.chips, .paginas { display: flex; gap: 8px; overflow-x: auto; margin: 0 -20px 18px; padding: 2px 20px 6px; scrollbar-width: none; }
+.chips::-webkit-scrollbar, .paginas::-webkit-scrollbar { display: none; }
+.chips a, .paginas a { flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 16px; background: var(--blanco); border: 2px solid var(--linea); color: var(--texto); font-weight: 600; text-decoration: none; }
+.chips a[aria-current], .paginas a[aria-current] { background: var(--rojo); border-color: var(--rojo); color: var(--blanco); }
+.chips a:hover, .paginas a:hover, .chips a:focus-visible, .paginas a:focus-visible { border-color: var(--rojo); outline: none; }
+.paginas { justify-content: center; margin: 22px 0 0; }
+.boton.contorno-rojo { background: var(--blanco); color: var(--rojo); }
+.boton.contorno-rojo:hover, .boton.contorno-rojo:focus-visible { background: var(--rojo); color: var(--blanco); }
+.acciones { display: grid; gap: 10px; }
+@media (min-width: 640px) { .cats { grid-template-columns: repeat(3, 1fr); } .cats.compacto { grid-template-columns: repeat(3, 1fr); } .chips, .paginas { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; flex-wrap: wrap; overflow: visible; } }
+@media (min-width: 860px) { .cats { grid-template-columns: repeat(3, 1fr); } }
+
+/* Filtro de poses (páginas /opsi/poses/): mismo estilo que los chips y botones de la web (bordes rectos, rojo oficial) */
+.buscador { margin: 0 0 18px; display: grid; gap: 6px; }
+.buscador label { font-weight: 600; font-size: 14px; }
+.buscador .fila { display: flex; gap: 8px; }
+.buscador input { flex: 1 1 auto; min-width: 0; min-height: 48px; padding: 0 14px; background: var(--blanco); border: 2px solid var(--linea); border-radius: 0; color: var(--texto); font: inherit; font-size: 16px; }
+.buscador input:focus { border-color: var(--rojo); outline: none; }
+.buscador .boton { flex: none; min-height: 48px; padding: 0 18px; }
+.resultados[hidden], .buscador[hidden], [data-filtrable][hidden] { display: none; }
