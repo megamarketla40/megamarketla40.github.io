@@ -266,7 +266,7 @@ a { color: var(--rojo); }
 .buscador { margin: 0 0 18px; display: grid; gap: 6px; }
 .buscador label { font-weight: 600; font-size: 14px; }
 .buscador .fila { display: flex; gap: 8px; }
-.buscador input { flex: 1 1 auto; min-width: 0; min-height: 48px; padding: 0 14px; background: var(--blanco); border: 2px solid var(--linea); border-radius: 0; color: var(--texto); font: inherit; font-size: 16px; }
+.buscador input { flex: 1 1 auto; min-width: 0; min-height: 48px; padding: 0 14px; background: var(--blanco); border: 2px solid var(--linea); -webkit-appearance: none; appearance: none; color: var(--texto); font: inherit; font-size: 16px; }
 .buscador input:focus { border-color: var(--rojo); outline: none; }
 .buscador .boton { flex: none; min-height: 48px; padding: 0 18px; }
 .resultados[hidden], .buscador[hidden], [data-filtrable][hidden] { display: none; }
